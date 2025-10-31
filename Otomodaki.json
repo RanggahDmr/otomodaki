@@ -1,0 +1,37 @@
+{
+  "id": "Switch1",
+  "name": "Switch1",
+  "type": "n8n-nodes-base.switch",
+  "typeVersion": 2,
+  "position": [520, 300],
+  "parameters": {
+    "mode": "rules",
+    "rules": [
+      {
+        "value1": "={{ $json[\"message\"] && $json[\"message\"][\"text\"] ? ($json[\"message\"][\"text\"].startsWith(\"/start\") ? \"start\" : $json[\"message\"][\"text\"].startsWith(\"/location\") ? \"location\" : $json[\"message\"][\"text\"].match(/maps\\.google\\.com/) ? \"mapslink\" : \"text\") : $json[\"message\"][\"location\"] ? \"user_location\" : \"unknown\" }}",
+        "operation": "isEqual",
+        "value2": "start"
+      },
+      {
+        "value1": "={{ $json[\"message\"] && $json[\"message\"][\"text\"] ? ($json[\"message\"][\"text\"].startsWith(\"/start\") ? \"start\" : $json[\"message\"][\"text\"].startsWith(\"/location\") ? \"location\" : $json[\"message\"][\"text\"].match(/maps\\.google\\.com/) ? \"mapslink\" : \"text\") : $json[\"message\"][\"location\"] ? \"user_location\" : \"unknown\" }}",
+        "operation": "isEqual",
+        "value2": "location"
+      },
+      {
+        "value1": "={{ $json[\"message\"] && $json[\"message\"][\"text\"] ? ($json[\"message\"][\"text\"].startsWith(\"/start\") ? \"start\" : $json[\"message\"][\"text\"].startsWith(\"/location\") ? \"location\" : $json[\"message\"][\"text\"].match(/maps\\.google\\.com/) ? \"mapslink\" : \"text\") : $json[\"message\"][\"location\"] ? \"user_location\" : \"unknown\" }}",
+        "operation": "isEqual",
+        "value2": "user_location"
+      },
+      {
+        "value1": "={{ $json[\"message\"] && $json[\"message\"][\"text\"] ? ($json[\"message\"][\"text\"].startsWith(\"/start\") ? \"start\" : $json[\"message\"][\"text\"].startsWith(\"/location\") ? \"location\" : $json[\"message\"][\"text\"].match(/maps\\.google\\.com/) ? \"mapslink\" : \"text\") : $json[\"message\"][\"location\"] ? \"user_location\" : \"unknown\" }}",
+        "operation": "isEqual",
+        "value2": "mapslink"
+      },
+      {
+        "value1": "={{ $json[\"message\"] && $json[\"message\"][\"text\"] ? ($json[\"message\"][\"text\"].startsWith(\"/start\") ? \"start\" : $json[\"message\"][\"text\"].startsWith(\"/location\") ? \"location\" : $json[\"message\"][\"text\"].match(/maps\\.google\\.com/) ? \"mapslink\" : \"text\") : $json[\"message\"][\"location\"] ? \"user_location\" : \"unknown\" }}",
+        "operation": "isEqual",
+        "value2": "text"
+      }
+    ]
+  }
+}
