@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔧 Otomodaki — Nearby Workshop Finder (Telegram Bot + Supabase + n8n)
 
-## Getting Started
+Otomodaki adalah aplikasi bot Telegram yang membantu pengguna menemukan bengkel terdekat berdasarkan lokasi secara otomatis. Sistem memanfaatkan **Supabase** sebagai database, **n8n** sebagai workflow automation, dan integrasi **AI** untuk memberikan rekomendasi bengkel yang relevan. Cocok untuk pengguna umum dan juga pemilik bengkel yang ingin mengelola data mereka sendiri.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 📸 Screenshots
 
-## Learn More
+<img width="1240" height="810" alt="otomodaki" src="https://github.com/user-attachments/assets/546c7e90-e12f-428b-b4a5-f1c6dc475884" />
 
-To learn more about Next.js, take a look at the following resources:
+---
+**Live Demo (Landing Page):** https://otomodaki.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# ✨ Fitur Utama
 
-## Deploy on Vercel
+### 🛰️ Cari Bengkel Terdekat
+- User kirim lokasi → sistem otomatis mendeteksi latitude & longitude.  
+- Menampilkan daftar bengkel terdekat berdasarkan radius.  
+- Menggunakan operasi geolokasi di Supabase.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🧭 Parsing Lokasi & Cek Detail Area
+- Parsing data lokasi dari Telegram (lat/lon).  
+- Menggunakan API publik untuk mengetahui nama jalan / area.  
+- Akurasi lokasi lebih baik sebelum menampilkan rekomendasi.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🧠 Rekomendasi AI
+- Jika bengkel tidak ditemukan → AI membantu mencarikan lokasi alternatif.  
+- Pesan output lebih ramah & informatif.
+
+### 🔧 Role Owner (Pemilik Bengkel)
+- Pemilik bengkel bisa mendaftarkan toko/bengkel.  
+- Update data bengkel melalui Telegram Bot.  
+- Tersimpan otomatis di Supabase.
+
+### 🗃 Database Terpusat (Supabase)
+- Menyimpan data bengkel, owner, dan lokasi.  
+- Auto Timestamp & Row Level Security sesuai kebutuhan.
+
+
+### 📱 Responsive Landing Page
+- Dibuat dengan Next.js  
+- Menjelaskan fitur aplikasi  
+- UI clean dan mobile-friendly
+
+---
+
+# 🧱 Tech Stack
+
+- **Frontend:** Next.js + Tailwind CSS  
+- **Backend:** Supabase  
+- **Automation:** n8n Workflow  
+- **Bot API:** Telegram Bot API  
+- **AI:** OpenAI / Gemini  
+- **Database:** Supabase PostgreSQL  
+
+---
+
