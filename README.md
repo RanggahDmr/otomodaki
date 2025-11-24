@@ -1,4 +1,4 @@
-# 🔧 Otomodaki — Nearby Workshop Finder (Telegram Bot + Supabase + n8n)
+# 🔧 Otomodaki — Nearby Workshop Finder 
 
 Otomodaki adalah aplikasi bot Telegram yang membantu pengguna menemukan bengkel terdekat berdasarkan lokasi secara otomatis. Sistem memanfaatkan **Supabase** sebagai database, **n8n** sebagai workflow automation, dan integrasi **AI** untuk memberikan rekomendasi bengkel yang relevan. Cocok untuk pengguna umum dan juga pemilik bengkel yang ingin mengelola data mereka sendiri.
 
